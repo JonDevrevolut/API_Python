@@ -1,164 +1,156 @@
-*------- Library API ----------*
+# 📚 API da Biblioteca
 
-Uma API simples para gerenciar usuários em uma biblioteca online, construída com FastAPI e Supabase. Esta API permite cadastro, login e gerenciamento de perfis de usuários (listar, obter detalhes e atualizar). Foi desenvolvida como parte de uma aula prática em Super Módulo, com foco em autenticação e CRUD.
+Uma **API simples para gerenciar usuários** em uma biblioteca online, construída com **FastAPI** e **Supabase**.
 
-Nota: Durante o desenvolvimento, enfrentamos alguns desafios (como erros de configuração do Supabase e validação de tokens), mas todos foram resolvidos, e a API está funcionando corretamente!
+Permite:
+- Cadastro
+- Login
+- Gerenciamento de perfis de usuários (listar, obter detalhes e atualizar)
 
+> ⛳ Desenvolvido como parte de uma aula prática em Super Módulo, com foco em **autenticação** e **CRUD**.
 
-*-------- Funcionalidades ---------*
+---
 
-Cadastro: Crie uma conta com email, senha, nome e função (ex.: member, admin).
+## 🛠️ Funcionalidades
 
-Login: Autentique-se e receba um token JWT.
+- 📝 **Cadastro:** Crie uma conta com email, senha, nome e função (ex.: membro, administrador).
+- 🔐 **Login:** Autentique-se e receba um token JWT.
+- 👥 **CRUD de Usuários:**
+  - Listar todos os perfis
+  - Obter detalhes de um usuário por ID
+  - Atualizar nome ou função
+- 📄 Documentação automática com Swagger disponível em: `http://localhost:8000/docs`
 
-CRUD de Usuários:
+---
 
-Listar todos os perfis.
+## 🚀 Tecnologias Utilizadas
 
-Obter detalhes de um usuário por ID.
+- **FastAPI** – Framework moderno e rápido para construção de APIs
+- **Supabase** – Banco de dados PostgreSQL + autenticação
+- **Pydantic** – Validação de dados
+- **Python 3.11+**
 
-Atualizar nome ou função do usuário.
+---
 
-- Documentação automática com Swagger em /docs.
+## 🗂️ Estrutura do Projeto
 
-*------ Tecnologias ---------*
+```bash
+/biblioteca-api
+├── /aplicativo
+│   ├── main.py                  # Ponto de entrada da API
+│   ├── /api/v1
+│   │   ├── auth.py              # Rotas de cadastro e login
+│   │   ├── users.py             # Rotas para gerenciar usuários
+│   ├── /núcleo
+│   │   ├── config.py            # Configurações do Supabase
+│   │   ├── database.py          # Conexão com o Supabase
+│   ├── /modelos
+│   │   ├── user.py              # Modelos de dados
+├── .env                         # Chaves do Supabase (não versionar!)
+├── requisitos.txt               # Dependências
+├── README.md                    # Este arquivo
+├── /imagens
+│   └── Structure.png            # Imagem da estrutura de pastas
+```
+---
 
-FastAPI: Framework para criar a API.
-Supabase: Banco de dados PostgreSQL e autenticação.
-Pydantic: Validação de dados.
-Python 3.11+: Linguagem usada.
-
-*--------- Estrutura do Projeto -----------*
-
-/library-api
-
-├── /app
-
-│   ├── main.py          # Ponto de entrada da API
-
-│   ├── /api
-
-│   │   ├── /v1
-
-│   │   │   ├── auth.py  # Rotas de cadastro e login
-
-│   │   │   ├── users.py # Rotas para gerenciar usuários
-
-│   ├── /core
-
-│   │   ├── config.py    # Configurações do Supabase
-
-│   │   ├── database.py  # Conexão com o Supabase
-
-│   ├── /models
-
-│   │   ├── user.py      # Modelos de dados
-
-├── .env                 # Chaves do Supabase (não versionar!)
-
-├── requirements.txt     # Dependências
-
-├── README.md            # Este arquivo
-
-├── /images
-
-│   ├── structure.png    # Imagem da estrutura de pastas
-
-
-*---------- Pré-requisitos ---------*
+✅ Pré-requisitos
 
 Python 3.11+
-
-Conta no Supabase (crie em supabase.com)
-
+Conta no Supabase
 Git instalado
 
+---
+## ⚙️ Configuração
 
-*--------- Configuração -----------*
-Clone o repositório:
-
+1. Clone o repositório:
 git clone https://github.com/seu-usuario/library-api.git
+cd biblioteca-api
 
-cd library-api
-
-
-Crie um ambiente virtual:
-
+2. Crie um ambiente virtual:
 python -m venv venv
+source venv/bin/activate      # Linux/Mac
+venv\Scripts\activate         # Windows
 
-source venv/bin/activate  # Linux/Mac
+3. Instale as dependências:
+pip install -r requisitos.txt
 
-venv\Scripts\activate     # Windows
+4. Configure o Supabase:
+Crie um projeto no Supabase
+Copie a URL do projeto e a API Key ("anon") em Configurações > API
+Habilite autenticação por e-mail:
+Painel > Autenticação > Provedores > E-mail
 
-
-Instale as dependências:
-
-pip install -r requirements.txt
-
-
-Configure o Supabase:
-
-Crie um projeto no Supabase.
-
-Pegue a URL do projeto (ex.: https://xyz.supabase.co) e a API Key (chave "anon" em Settings > API).
-
-Habilite autenticação por email (Dashboard > Authentication > Providers > Email).
-
-Crie a tabela profiles no editor SQL do Supabase:CREATE TABLE profiles (
-
-    id UUID PRIMARY KEY REFERENCES auth.users(id),
-    full_name VARCHAR(255),
-    role VARCHAR(50) DEFAULT 'member',
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+5. Crie a tabela profiles no SQL Editor:
+```bash
+*SQL:
+CREATE TABLE profiles (
+  id UUID PRIMARY KEY REFERENCES auth.users(id),
+  full_name VARCHAR(255),
+  role VARCHAR(50) DEFAULT 'member',
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-
-Crie o arquivo .env:Na raiz do projeto, crie um arquivo .env com:
-
+```
+---
+```bash
+*ini
 SUPABASE_URL=https://xyz.supabase.co
+SUPABASE_KEY=sua-chave-anônima
+```
 
-SUPABASE_KEY=your-anon-key
+---
 
+▶️ Como Rodar
 
-
-*------- Como Rodar ------*
-
-Inicie a API:
+Inicie a API localmente:
 uvicorn app.main:app --reload
+Acesse: http://localhost:8000/docs
+
+---
+
+🔁 Teste as Rotas
+
+🔸 Cadastro
+- POST /api/v1/auth/signup
+
+Exemplo de payload:
+{
+  "email": "teste@email.com",
+  "password": "senha123",
+  "full_name": "Teste",
+  "role": "member"
+}
+
+🔸 Login
+
+POST /api/v1/auth/login
+- Receba o token JWT
+- Use o token no Swagger (ícone de cadeado) para testar as rotas protegidas
+
+---
+
+🧪 Notas sobre o Desenvolvimento
+Durante o processo, enfrentamos e resolvemos:
+
+❌ Configuração incorreta do Supabase (URL/chave)
+
+❌ Problemas com tokens JWT
+
+❌ Erros ao mapear dados para os modelos Pydantic
+
+Tudo foi solucionado com testes, revisão da documentação e uso do Swagger.
+
+A API está estável e pronta para uso! ✅
+
+---
+
+📈 Próximos Passos
+
+- 🔄 Rotas para redefinição de senha
+
+- 🔐 Implementar permissões (ex.: só admins listam usuários)
+
+- 📚 Gerenciamento de livros
 
 
-*------ Acesse a API: -----*
-
-Abra http://localhost:8000/docs para ver a documentação Swagger.
-
-Teste as rotas:
-
-POST /api/v1/auth/signup: Cadastre um usuário (ex.: {"email": "teste@email.com", "password": "senha123", "full_name": "Teste", "role": "member"}).
-
-POST /api/v1/auth/login: Faça login e pegue o token.
-
-Use o token para testar as rotas /users (clique no cadeado no Swagger para autenticar).
-
-
-*----- Notas sobre Desenvolvimento ---------*
-
-Durante o desenvolvimento, enfrentamos erros como:
-
-Configuração incorreta do Supabase (URL ou chave errada).
-
-Problemas com validação de tokens JWT.
-
-Erros ao mapear dados do Supabase para os modelos Pydantic.
-
-
-Todos os erros foram resolvidos ajustando configurações, revisando a documentação do Supabase e testando as rotas no Swagger.
-
-A API está estável e pronta para uso!
-
-*------- Próximos Passos --------*
-
-Adicionar rotas para redefinição de senha.
-
-Implementar permissões (ex.: apenas admins listam usuários).
-
-Adicionar funcionalidades como gerenciamento de livros.
+<p align="center"><strong>🚀 Projeto em desenvolvimento contínuo! Sinta-se em casa r.</strong></p> 
