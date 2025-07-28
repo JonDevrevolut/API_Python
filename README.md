@@ -26,19 +26,33 @@ Python 3.11+: Linguagem usada.
 *--------- Estrutura do Projeto -----------*
 
 /library-api
+
 ├── /app
+
 │   ├── main.py          # Ponto de entrada da API
+
 │   ├── /api
+
 │   │   ├── /v1
+
 │   │   │   ├── auth.py  # Rotas de cadastro e login
+
 │   │   │   ├── users.py # Rotas para gerenciar usuários
+
 │   ├── /core
+
 │   │   ├── config.py    # Configurações do Supabase
+
 │   │   ├── database.py  # Conexão com o Supabase
+
 │   ├── /models
+
 │   │   ├── user.py      # Modelos de dados
+
 ├── .env                 # Chaves do Supabase (não versionar!)
+
 ├── requirements.txt     # Dependências
+
 ├── README.md            # Este arquivo
 
 
