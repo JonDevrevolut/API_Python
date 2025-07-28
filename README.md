@@ -1,4 +1,5 @@
 *------- Library API ----------*
+
 Uma API simples para gerenciar usuários em uma biblioteca online, construída com FastAPI e Supabase. Esta API permite cadastro, login e gerenciamento de perfis de usuários (listar, obter detalhes e atualizar). Foi desenvolvida como parte de uma aula prática, com foco em autenticação e CRUD.
 
 Nota: Durante o desenvolvimento, enfrentamos alguns desafios (como erros de configuração do Supabase e validação de tokens), mas todos foram resolvidos, e a API está funcionando corretamente!
