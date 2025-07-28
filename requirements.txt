@@ -3,5 +3,9 @@ uvicorn==0.30.6
 supabase==2.9.1
 pydantic==2.9.2
 python-dotenv==1.0.1
+<<<<<<< HEAD
 pydantic-settings==2.2.1  # ou a última versão compatível
 
+=======
+pydantic-settings==2.2.1
+>>>>>>> 7b69b88 (Subindo meu codigo da API)
