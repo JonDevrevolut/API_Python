@@ -24,6 +24,7 @@ Pydantic: Validação de dados.
 Python 3.11+: Linguagem usada.
 
 *--------- Estrutura do Projeto -----------*
+
 /library-api
 ├── /app
 │   ├── main.py          # Ponto de entrada da API
@@ -42,6 +43,7 @@ Python 3.11+: Linguagem usada.
 
 
 *---------- Pré-requisitos ---------*
+
 Python 3.11+
 Conta no Supabase (crie em supabase.com)
 Git instalado
