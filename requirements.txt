@@ -4,8 +4,12 @@ supabase==2.9.1
 pydantic==2.9.2
 python-dotenv==1.0.1
 <<<<<<< HEAD
+<<<<<<< HEAD
 pydantic-settings==2.2.1  # ou a última versão compatível
 
 =======
 pydantic-settings==2.2.1
 >>>>>>> 7b69b88 (Subindo meu codigo da API)
+=======
+pydantic-settings==2.2.1
+>>>>>>> 7b69b888129f676c1a6b67792f9d9be8e5c3edfe
