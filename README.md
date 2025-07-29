@@ -157,4 +157,4 @@ A API está estável e pronta para uso! ✅
 
 | Modulos Extras        | Imagem Estática                        |
 | --------------------- | -------------------------------------- |
-| Diploma               |  |
+|     Diploma           | <img width="942" height="702" alt="Image" src="https://github.com/user-attachments/assets/282aaff9-5e04-4410-b5ca-cb2d6d2ee125" /> |
