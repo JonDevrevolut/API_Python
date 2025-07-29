@@ -153,4 +153,6 @@ A API está estável e pronta para uso! ✅
 - 📚 Gerenciamento de livros
 
 
-<p align="center"><strong>🚀 Projeto em desenvolvimento contínuo! Sinta-se em casa r.</strong></p> 
+<p align="center"><strong>🚀 Projeto em desenvolvimento contínuo, aplicado pelo Super Módulo pela Infinity School! Sinta-se em casa.</strong></p> 
+
+
