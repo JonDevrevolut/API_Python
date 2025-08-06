@@ -134,7 +134,7 @@ POST /api/v1/auth/login
 
 ---
 
-🧪 Notas sobre o Desenvolvimento
+## 🧪 Notas sobre o Desenvolvimento
 Durante o processo, enfrentamos e resolvemos:
 
 ❌ Configuração incorreta do Supabase (URL/chave)
@@ -149,7 +149,7 @@ A API está estável e pronta para uso! ✅
 
 ---
 
-📈 Próximos Passos
+## 📈 Próximos Passos
 
 - 🔄 Rotas para redefinição de senha
 
@@ -164,4 +164,5 @@ A API está estável e pronta para uso! ✅
 |       Arquivo         | Imagem Estática                        |
 | --------------------- | -------------------------------------- |
 |       Diploma         | <img width="942" height="702" alt="Image" src="https://github.com/user-attachments/assets/282aaff9-5e04-4410-b5ca-cb2d6d2ee125" /> |
+
 
