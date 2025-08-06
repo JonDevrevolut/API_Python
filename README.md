@@ -115,10 +115,15 @@ Acesse: http://localhost:8000/docs
 
 Exemplo de payload:
 {
+
   "email": "teste@email.com",
+  
   "password": "senha123",
+  
   "full_name": "Teste",
+  
   "role": "member"
+  
 }
 
 🔸 Login
@@ -152,9 +157,11 @@ A API está estável e pronta para uso! ✅
 
 - 📚 Gerenciamento de livros
 
+---
 
 <p align="center"><strong>🚀 Projeto em desenvolvimento contínuo, aplicado pelo Super Módulo pela Infinity School! Sinta-se em casa.</strong></p> 
 
-| Modulos Extras        | Imagem Estática                        |
+|       Arquivo         | Imagem Estática                        |
 | --------------------- | -------------------------------------- |
-|     Diploma           | <img width="942" height="702" alt="Image" src="https://github.com/user-attachments/assets/282aaff9-5e04-4410-b5ca-cb2d6d2ee125" /> |
+|       Diploma         | <img width="942" height="702" alt="Image" src="https://github.com/user-attachments/assets/282aaff9-5e04-4410-b5ca-cb2d6d2ee125" /> |
+
